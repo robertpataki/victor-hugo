@@ -1,0 +1,24 @@
+/* Use Normalize as a reset baseline */
+@import 'normalize.css/normalize';
+
+/* Apply custom resets */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+* {
+  backface-visibility: hidden;
+    
+  &,
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

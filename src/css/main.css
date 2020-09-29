@@ -1,32 +1,31 @@
-/*
-  You can use import statements to include partials:
- */
-@import 'imports/reset.css';
+/* Module imports */
+@import '00_base';
+@import '01_atom';
+@import '02_molecule';
+@import '03_organism';
 
-/*
-  Or add your statements here:
- */
+
+
+
+
+
+
+
+@import '04_template';
+
+/* Custom styles */
 body {
-  font-size: calc(10px + 1vmin);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
     'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: #282c34;
-  color: white;
+    @mixin font-smoothing;
 }
 
-a {
-  color: pink;
-  text-decoration: none;
-}
+.test-paragraph {
+  color: $v-col-indigo;
+  margin-$(dir-top): $u-margin;
 
-.content {
-  padding: 0 32px;
+  & > span {
+    font-weight: bold;
+  }
 }
